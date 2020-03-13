@@ -3,6 +3,7 @@ import queryString from 'query-string';
 import io from 'socket.io-client';
 
 import './styles/Chat.css'
+import InfoBar from './InfoBar';
 let socket;
 export default function Chat({ location }) {
     const [name, setName] = useState('');
@@ -46,10 +47,11 @@ export default function Chat({ location }) {
         }
     }
 
-    console.log(message,messages);
+    console.log(message, messages);
     return (
         <div className="outerContainer">
             <div className="container">
+                <InfoBar room={room} />
                 <input
                     value={message}
                     onChange={e => setMessage(e.target.value)}
