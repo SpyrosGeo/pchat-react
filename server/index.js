@@ -15,9 +15,9 @@ const io = socket(server);
 io.on('connection',socket=>{
         console.log("We have a new connection")
 
-        socket.on('join',({name,room})=>{
+        socket.on('join',({name,room},callback)=>{
             console.log(name)
-            console.log(room)
+          
         })
     socket.on('disconnect',()=>{
         console.log("user has left")

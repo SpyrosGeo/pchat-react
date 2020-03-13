@@ -15,9 +15,15 @@ export default function Chat({ location }) {
         setName(name);
         setRoom(room);
         //emit events
-        socket.emit('join', { name, room })
+        socket.emit('join', { name, room },({err})=>{
 
+        })
+        //handle disconnect
+        return()=>{
+            socket.emit('disconnect');
 
+            socket.off();
+        }
     }, [ENDPOINT, location.search])
     return (
         <div>
