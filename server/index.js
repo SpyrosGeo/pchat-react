@@ -1,7 +1,7 @@
 const express = require('express');
 const socket = require('socket.io');
 const http = require('http');
-
+const cors = require('cors');
 //import helper fuctions
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./users')
 
@@ -17,6 +17,8 @@ const io = socket(server);
 
 //use the router as middleware
 app.use(router);
+app.use(cors());
+
 io.on('connection', socket => {
     socket.on('join', ({ name, room }, callback) => {
         const { err, user } = addUser({ id: socket.id, name, room });

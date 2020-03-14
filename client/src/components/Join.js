@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import './styles/Join.css'
-
+import logo from './Images/angrybird.png'
 export default function Join() {
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
@@ -9,13 +9,17 @@ export default function Join() {
     return (
         <div className="joinOuterContainer">
             <div className="joinInnerContainer">
-                <h1 className="heading">Join Pchat</h1>
-                <div><input placeholder=""
+                
+
+                    <img className="imageContainer" src={logo}alt="logo"/>
+               
+                <h1 className="heading">Join pouChat</h1>
+                <div><input placeholder="Username"
                     className="joinInput mt-20"
                     type="text"
                     onChange={(e) => setName(e.target.value)} />
                 </div>
-                <div><input placeholder=""
+                <div><input placeholder="Room"
                     className="joinInput"
                     type="text"
                     onChange={(e) => setRoom(e.target.value)} />

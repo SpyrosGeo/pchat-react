@@ -59,6 +59,10 @@ body {
     margin-top: 20px;
 }
 
+.imageContainer{
+    width: 8rem;
+
+}
 @media (min-width: 320px) and (max-width: 480px) {
     .joinOuterContainer {
         height: 100%;

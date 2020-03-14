@@ -2,7 +2,6 @@ import React from 'react'
 import "./styles/InfoBar.css"
 import closeIcon from '../Icons/closeIcon.png';
 import onlineIcon from '../Icons/onlineIcon.png';
-import queryString from 'query-string';
 
 
 export default function InfoBar({ room }) {
